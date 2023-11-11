@@ -27,4 +27,6 @@ for question in question_data:
 # todo check the answer
 # todo check if at the end of the quiz
 quiz = QuizzBrain(question_bank)
-quiz.next_question()
+
+while quiz.still_has_questions():
+    quiz.next_question()
