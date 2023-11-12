@@ -49,6 +49,6 @@ tim.hideturtle()
 tim.penup()
 tim.setposition(-315, 315)
 tim.pendown()
-draw_dot_matrix(20, 20)
+draw_dot_matrix(20, 20, 30)
 
 screen.exitonclick()
