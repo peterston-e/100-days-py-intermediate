@@ -11,7 +11,7 @@ screen.setup(width=CANVAS + PADDING, height=CANVAS + PADDING, )
 turtle.colormode(255)
 tim = Turtle()
 tim.shape("arrow")
-tim.speed(0)
+tim.speed(9)
 
 color_thing = colorgram.extract('colorful.jpeg', 50)
 
