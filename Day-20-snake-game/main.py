@@ -26,7 +26,7 @@ for position in starting_positions:
 game_on = True
 while game_on:
     screen.update()
-    time.sleep(0.7)
+    time.sleep(0.4)
 
     for seg_num in range(len(segments) - 1, 0, -1):  # start, stop, step
         new_x = segments[seg_num - 1].xcor()
