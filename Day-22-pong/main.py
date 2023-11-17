@@ -11,7 +11,7 @@ screen.tracer(0)
 
 
 left_paddle = Paddle((-360, 0))
-right_paddle = Paddle((350, 0))
+right_paddle = Paddle((360, 0))
 ball = Ball()
 
 
@@ -29,8 +29,12 @@ while game_on:
     ball.move()
 
     if ball.ycor() > 285 or ball.ycor() < -285:
-        ball.bounce()
+        ball.bounce_y()
 
+    if ball.distance(right_paddle) < 50 and ball.xcor() > 340:
+        ball.bounce_x()
 
+    if ball.distance(left_paddle) < 50 and ball.xcor() < -340:
+        ball.bounce_x()
 
 screen.exitonclick()
