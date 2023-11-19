@@ -33,24 +33,24 @@ while game_on:
 
     if ball.distance(right_paddle) < 50 and ball.xcor() > 340:
         ball.bounce_x()
-        ball.increase_speed()
+        # ball.increase_speed()
 
     if ball.distance(left_paddle) < 50 and ball.xcor() < -340:
         ball.bounce_x()
-        ball.increase_speed()
+        # ball.increase_speed()
 
     # right side missed.
     if ball.xcor() > 380:
         scoreboard.increase_l_score()
         ball.reset_position()
         ball.bounce_x()
-        # reset speed
+        ball.reset_speed()
 
     # left side missed
     if ball.xcor() < -380:
         scoreboard.increase_r_score()
         ball.reset_position()
         ball.bounce_x()
-        # reset speed
+        ball.reset_speed()
 
 screen.exitonclick()

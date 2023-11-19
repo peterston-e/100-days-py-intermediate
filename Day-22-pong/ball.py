@@ -6,8 +6,8 @@ class Ball(Turtle):
         self.shape("circle")
         self.color("white")
         self.penup()
-        self.y_move = 1
-        self.x_move = 1
+        self.y_move = 2
+        self.x_move = 2
         # self.move_speed = 0.1
 
 
@@ -21,16 +21,37 @@ class Ball(Turtle):
         self.y_move *= -1
 
     def bounce_x(self):
-        self.x_move = self.x_move + 0.1
-
-        self.y_move = self.y_move + 0.1
+        self.x_move *= -1
+        self.increase_speed()
 
     def reset_position(self):
         self.goto(0, 0)
-        # self.move_speed = 0.1
+
 
     def increase_speed(self):
-        pass
+        if self.y_move < 0 and self.x_move < 0:
+            self.y_move += -0.1
+            self.x_move += -0.1
+        elif self.y_move > 0 and self.x_move > 0:
+            self.y_move += 0.1
+            self.x_move += 0.1
+        elif self.y_move > 0 and self.x_move < 0:
+            self.y_move += 0.1
+            self.x_move += -0.1
+        elif self.y_move < 0 and self.x_move > 0:
+            self.y_move += -0.1
+            self.x_move += 0.1
 
     def reset_speed(self):
-        pass
+        if self.y_move < 0 and self.x_move < 0:
+            self.y_move = -2
+            self.x_move = -2
+        elif self.y_move > 0 and self.x_move > 0:
+            self.y_move = 2
+            self.x_move = 2
+        elif self.y_move > 0 and self.x_move < 0:
+            self.y_move = 2
+            self.x_move = -2
+        elif self.y_move < 0 and self.x_move > 0:
+            self.y_move = -2
+            self.x_move = 2
