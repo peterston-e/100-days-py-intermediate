@@ -2,6 +2,7 @@ from turtle import Turtle
 STARTING_POSITION = (0, -300)
 MOVE_DISTANCE = 50
 
+
 class Player(Turtle):
     def __init__(self):
         super().__init__()
